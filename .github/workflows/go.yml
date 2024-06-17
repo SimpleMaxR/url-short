@@ -22,10 +22,16 @@ jobs:
         go-version: '1.21.3'
 
     - name: Build
-      run: go build -v ./...
+      run: go build -o urlShorten -v ./...
 
     # - name: Test
     #   run: go test -v ./...
 
     - name: Format code
       run: go fmt ./...
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: urlShorten
+        path: urlShorten    
