@@ -30,8 +30,8 @@ jobs:
     - name: Format code
       run: go fmt ./...
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
       with:
         name: urlShorten
         path: urlShorten    
